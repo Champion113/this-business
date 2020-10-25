@@ -8,9 +8,9 @@ An unique way business owners can be able to view/manage their departments, role
   3. [Tests](#tests)
   4. [URL](#URL)
   ## Installation 
-   Inquirer package
-   MySQL2 package
-   Console Table package
+   Inquirer package,
+   MySQL2 package,
+   Console Table package,
    Node.js 
   ## License 
   ![github license](https://img.shields.io/badge/license-ISC-blue.svg)
