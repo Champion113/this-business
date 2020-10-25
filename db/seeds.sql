@@ -1,55 +1,55 @@
 INSERT INTO department
-  (departName, id )
+  (departName )
 VALUES
-  ('LEO', 369);
+  ('LEO');
 INSERT INTO department
-  (departName, id )
+  (departName )
 VALUES
-  ('EMT', 100);
+  ('EMT');
 INSERT INTO department
-  (departName, id)
+  (departName )
 VALUES
-  ('PFD', 200);
+  ('PFD');
 INSERT INTO department
-  (departName, id)
+  (departName )
 VALUES
-  ('CO', 300);
+  ('CO');
 
-INSERT INTO role (jobTitle, id, departRole, salary ) 
+INSERT INTO roles (jobTitle, departRole, salaryRole ) 
 VALUES
-  ('Patrol', 369, 'LEO', 80,000 );
-INSERT INTO role (jobTitle, id, departRole, salary ) 
+  ('Patrol', 'LEO', 80000 );
+INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
-  ('Sergeant', 369, 'LEO', 100,000 );
-INSERT INTO role (jobTitle, id, departRole, salary ) 
+  ('Sergeant', 'LEO', 100000 );
+INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
-  ('Medic', 100, 'EMT', 60,000 );
-INSERT INTO role (jobTitle, id, departRole, salary ) 
+  ('Medic', 'EMT', 60000 );
+INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
-  ('fireman', 200, 'PFD', 90,000 );
-INSERT INTO role (jobTitle, id, departRole, salary ) 
+  ('fireman', 'PFD', 90000 );
+INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
-  ('Lieutenant', 200, 'PFD', 120,000 );  
-INSERT INTO role (jobTitle, id, departRole, salary ) 
+  ('Lieutenant', 'PFD', 120000 );  
+INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
-  ('Guard', 300, 'CO', 50,000 ); 
+  ('Guard', 'CO', 50000 ); 
 
 
-INSERT INTO employee (id, firstName, lastName, jobTitle, departName, salary, manager ) 
+INSERT INTO employees (firstName, lastName, jobTitle, manager ) 
 VALUES
-  (369, 'John', 'Brown', 'Patrol', 'LEO', 80,000, 'Grace' );
-INSERT INTO employee (id, firstName, lastName, jobTitle, departName, salary, manager ) 
+  ('John', 'Brown', 'Patrol', 'Grace' );
+INSERT INTO employees (firstName, lastName, jobTitle, manager ) 
 VALUES
-  (369, 'Grace', 'Townes', 'Sergeant', 'LEO', 100,000, NULL ); 
-INSERT INTO employee (id, firstName, lastName, jobTitle, departName, salary, manager ) 
+  ('Grace', 'Townes', 'Sergeant', NULL ); 
+INSERT INTO employees (firstName, lastName, jobTitle, manager ) 
 VALUES
-  (100, 'Mike', 'Johnson', 'Medic', 'EMT', 80,000, NULL );
-INSERT INTO employee (id, firstName, lastName, jobTitle, department, salary, manager ) 
+  ('Mike', 'Johnson', 'Medic', NULL );
+INSERT INTO employees (firstName, lastName, jobTitle, manager ) 
 VALUES
-  (200, 'Brian', 'Taylor', 'fireman', 'PFD', 90,000, 'Stephanie' ); 
-INSERT INTO employee (id, firstName, lastName, jobTitle, department, salary, manager ) 
+  ('Brian', 'Taylor', 'fireman', 'Stephanie' ); 
+INSERT INTO employees (firstName, lastName, jobTitle, manager ) 
 VALUES
-  (200, 'Stephanie', 'Moore', 'Lieutenant', 'PFD', 120,000, NULL);        
-INSERT INTO employee (id, firstName, lastName, jobTitle, department, salary, manager ) 
+  ('Stephanie', 'Moore', 'Lieutenant', NULL);        
+INSERT INTO employees (firstName, lastName, jobTitle, manager ) 
 VALUES
-  (200, 'Donald', 'Smith', 'Guard', 'CO', 50,000, NULL );  
+  ('Donald', 'Smith', 'Guard', NULL );  
