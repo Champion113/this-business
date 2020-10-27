@@ -46,7 +46,8 @@ function startApp() {
           console.log("goodbye")
       }
     })
-  // startApp();
+  }   
+  startApp();
   //VIEW ALL DEPARTMENTS
   const readDepartments = () => {
     console.log('Selecting all departments...\n');
@@ -226,7 +227,7 @@ function startApp() {
               ));
         }))
   }
-}
+
 
     // const readDepartment = () => {
     //   console.log('Selecting all departments...\n');
