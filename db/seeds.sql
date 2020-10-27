@@ -1,19 +1,19 @@
-INSERT INTO department
+INSERT INTO departments
   (departName )
 VALUES
-  ('LEO');
-INSERT INTO department
+  ('PPD');
+INSERT INTO departments
   (departName )
 VALUES
-  ('EMT');
-INSERT INTO department
+  ('PES');
+INSERT INTO departments
   (departName )
 VALUES
   ('PFD');
-INSERT INTO department
+INSERT INTO departments
   (departName )
 VALUES
-  ('CO');
+  ('PPS');
 
 INSERT INTO roles (jobTitle, departRole, salaryRole ) 
 VALUES
@@ -26,10 +26,10 @@ VALUES
   ('Medic', 'EMT', 60000 );
 INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
-  ('fireman', 'PFD', 90000 );
+  ('fireman', 'FIREBOARD', 90000 );
 INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
-  ('Lieutenant', 'PFD', 120000 );  
+  ('Lieutenant', 'FIREBOARD', 120000 );  
 INSERT INTO roles (jobTitle, departRole, salaryRole  ) 
 VALUES
   ('Guard', 'CO', 50000 ); 
