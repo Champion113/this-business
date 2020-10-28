@@ -15,7 +15,7 @@ function startApp() {
       type: 'list',
       name: 'begin',
       message: 'Welcome! What would you like to do?',
-      choices: ['View All Departments', 'View All Roles', 'View All Employees', new inquirer.Separator(), 'Add Department', 'Add Role', 'Add Employee', 'Update Employee Role']
+      choices: ['View All Departments', 'View All Roles', 'View All Employees', new inquirer.Separator(), 'Add Departments', 'Add Roles', 'Add Employees', 'Update Employees']
     }
   )
     .then(res => {
@@ -46,40 +46,44 @@ function startApp() {
           console.log("goodbye")
       }
     })
-  }   
+  }
   startApp();
+
   //VIEW ALL DEPARTMENTS
   const readDepartments = () => {
     console.log('Selecting all departments...\n');
     connection.query('SELECT * FROM departments;', function (err, res) {
       if (err) throw err;
-      cTable(res);
+      console.table(res);
+      startApp();  
     })
-    startApp();
+    
   };
 
 
-  startApp()
+
   //VIEW ALL ROLES
   const readRoles = () => {
     console.log('Selecting all roles...\n');
     connection.query('SELECT roles.id, roles.jobTitle, roles.deptRoles, roles.salaryRoles FROM roles RIGHT JOIN departments ON roles.departName = departName;', function (err, res) {
       if (err) throw err;
-      cTable(res);
+      console.table(res);
+      startApp();
     })
-    startApp();
+    
   };
   //VIEW ALL EMPLOYEES
   const readEmployees = () => {
     console.log('Selecting all employees...\n');
     connection.query('SELECT employees.id, employees.FirstName, employees.lastName, employees.jobTitle, employees.manager FROM employees LEFT JOIN departments ON roles.departName = departName;', function (err, res) {
       if (err) throw err;
-      cTable(res);
+      console.table(res);
+      startApp();
     })
-    startApp();
+    
   };
 
-  startApp()
+
   //ADD DEPARTMENT FUNCTION
   const addDepartments = () => {
     console.log('Adding departments...\n');
@@ -87,7 +91,7 @@ function startApp() {
       'INSERT INTO department SET ?',
       inquirer.prompt(
         {
-          name: 'department',
+          name: 'departments',
           type: 'input',
           message: 'Name the department you like to add'
         })
@@ -218,7 +222,7 @@ function startApp() {
                   if (err) throw err;
                   console.log(res.affectedRows + ' employee role updated! \n');;
                   // Call updateProduct() AFTER the INSERT completes
-                  readsEmployees();
+                  readEmployees();
                 },
 
                 // console.log(query.sql)
