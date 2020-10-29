@@ -1,7 +1,7 @@
 # this-business
 ## Description 
 An unique way business owners can be able to view/manage their departments, roles, and employees in their company to be organize and plan this business. This command-line application capable to add/update department, role and employee to update in the database. 
-  <!-- ![README](NoteTakergif.gif) -->
+  ![README](businessgif.gif)
    ## Table of Content
   1. [Installation](#installation)
   2. [License](#license)
