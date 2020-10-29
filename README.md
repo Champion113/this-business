@@ -15,7 +15,7 @@ An unique way business owners can be able to view/manage their departments, role
   ## License 
   ![github license](https://img.shields.io/badge/license-ISC-blue.svg)
   ## Tests
-   npm start
+   node server.js
   ## URL
   [github](https://github.com/Champion113/this-business)
   
