@@ -65,7 +65,7 @@ function startApp() {
   //VIEW ALL ROLES
   const readRoles = () => {
     console.log('Selecting all roles...\n');
-    connection.query('SELECT roles.id, roles.jobTitle, roles.deptRoles, roles.salaryRoles FROM roles RIGHT JOIN departments ON roles.departName = departName;', function (err, res) {
+    connection.query('SELECT roles.id, roles.jobTitle, roles.departRole, roles.salaryRole FROM roles RIGHT JOIN departments ON departName = departName;', function (err, res) {
       if (err) throw err;
       console.table(res);
       startApp();
@@ -75,7 +75,7 @@ function startApp() {
   //VIEW ALL EMPLOYEES
   const readEmployees = () => {
     console.log('Selecting all employees...\n');
-    connection.query('SELECT employees.id, employees.FirstName, employees.lastName, employees.jobTitle, employees.manager FROM employees LEFT JOIN departments ON roles.departName = departName;', function (err, res) {
+    connection.query('SELECT employees.id, employees.FirstName, employees.lastName, employees.jobTitle, employees.manager FROM employees LEFT JOIN departments ON departName = departName;', function (err, res) {
       if (err) throw err;
       console.table(res);
       startApp();
@@ -180,7 +180,7 @@ function startApp() {
           {
             firstName: res.firstName,
             lastName: res.lastName,
-            role: res.employeeRole,
+            departRole: res.departRole,
             manager: res.manager
           },
           function (err, res) {
